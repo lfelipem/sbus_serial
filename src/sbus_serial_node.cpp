@@ -49,7 +49,7 @@ int main( int argc, char **argv )
 	int enableChannelNum;
 	double enableChannelProportionalMin;
 	double enableChannelProportionalMax;
-	param_nh.param( "port", port, std::string( "/dev/ttyTHS2" ));     // /dev/ttyTHS2 is UART on J17
+	param_nh.param( "port", port, std::string( "/dev/serial1" ));     // /dev/ttyTHS2 is UART on J17
 	param_nh.param( "refresh_rate_hz", refresh_rate_hr, 5 );
 	param_nh.param( "rxMinValue", rxMinValue, 172 );
 	param_nh.param( "rxMaxValue", rxMaxValue, 1811 );

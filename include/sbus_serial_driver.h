@@ -64,7 +64,11 @@ namespace sbus_serial
 
 		static constexpr int kSbusFrameLength_ = 25;
 		static constexpr uint8_t kSbusHeaderByte_ = 0x0F;
-		static constexpr uint8_t kSbusFooterByte_ = 0x00;
+		//static constexpr uint8_t kSbusFooterByte_ = 0x00;
+		static constexpr uint8_t kSbusFooterByte1_ = 0x04;
+		static constexpr uint8_t kSbusFooterByte2_ = 0x14;
+		static constexpr uint8_t kSbusFooterByte3_ = 0x24;
+		static constexpr uint8_t kSbusFooterByte4_ = 0x34;
 		static constexpr int kPollTimeoutMilliSeconds_ = 500;
 
 		bool configureSerialPortForSBus() const;

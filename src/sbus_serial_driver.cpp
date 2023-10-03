@@ -259,7 +259,10 @@ namespace sbus_serial
 						// byte (byte 23)
 						if( bytes_buf.front() == kSbusHeaderByte_
 						    && !(bytes_buf[kSbusFrameLength_ - 2] & 0xF0)
-						    && bytes_buf[kSbusFrameLength_ - 1] == kSbusFooterByte_ )
+						    && (bytes_buf[kSbusFrameLength_ - 1] == kSbusFooterByte1_ ||
+							bytes_buf[kSbusFrameLength_ - 1] == kSbusFooterByte2_ ||
+							bytes_buf[kSbusFrameLength_ - 1] == kSbusFooterByte3_ ||
+							bytes_buf[kSbusFrameLength_ - 1] == kSbusFooterByte4_))
 						{
 
 							for( uint8_t i = 0; i < kSbusFrameLength_; i++ )
